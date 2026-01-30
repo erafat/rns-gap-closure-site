@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>RNS Gap Closure - Mock Site</title>
+    <title>RNS Gap Closure - Project Mock</title>
     <meta
       name="description"
       content="RNS Gap Closure: advisory-only QI decision support mock site for neuromodulation care gap identification."
@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -21,15 +21,15 @@
   <body>
     <a class="skip" href="#main">Skip to content</a>
 
-    <div class="layout">
-      <aside class="sidebar" id="sidebar">
+    <header class="site-header">
+      <div class="container header__inner">
         <div class="brand">
           <div class="brand__mark" aria-hidden="true">
             <svg viewBox="0 0 48 48" role="img" aria-label="RNS Gap Closure">
               <defs>
                 <linearGradient id="brandGradient" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#ee6b2f" />
-                  <stop offset="1" stop-color="#f7b267" />
+                  <stop offset="0" stop-color="#b45330" />
+                  <stop offset="1" stop-color="#d9b66e" />
                 </linearGradient>
               </defs>
               <path
@@ -42,358 +42,381 @@
               <path
                 d="M14 29c4 6 16 6 20 0"
                 fill="none"
-                stroke="#222c3c"
-                stroke-opacity="0.7"
+                stroke="#1f2937"
+                stroke-opacity="0.6"
                 stroke-width="3.5"
                 stroke-linecap="round"
               />
-              <circle cx="16" cy="19" r="2.5" fill="#ee6b2f" />
-              <circle cx="32" cy="19" r="2.5" fill="#f7b267" />
+              <circle cx="16" cy="19" r="2.5" fill="#b45330" />
+              <circle cx="32" cy="19" r="2.5" fill="#d9b66e" />
             </svg>
           </div>
           <div class="brand__text">
             <div class="brand__title">RNS Gap Closure</div>
-            <div class="brand__subtitle">Clinical decision support</div>
+            <div class="brand__subtitle">Clinical decision support (concept)</div>
           </div>
         </div>
 
-        <nav class="side-nav" aria-label="Primary">
-          <a class="is-active" href="#home">Home</a>
-          <a href="#what">What it Does</a>
-          <a href="#inputs">Inputs</a>
-          <a href="#how">How it Works</a>
-          <a href="#demo">Interactive Demo</a>
-          <a href="#safety">Safety & Governance</a>
-          <a href="#evaluation">Evaluation</a>
-          <a href="#team">Team & Next Steps</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#overview">Overview</a>
+          <a href="#gap">Gap Definition</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#evidence">Evidence</a>
+          <a href="#demo">Demo</a>
+          <a href="#safety">Safety</a>
+          <a href="#team">Team</a>
         </nav>
 
-      </aside>
+        <a class="btn btn--ghost" href="#demo">Launch Demo</a>
+      </div>
+    </header>
 
-      <div class="content">
-        <header class="topbar">
-          <button class="menu" type="button" aria-expanded="false" aria-controls="sidebar">
-            Menu
-          </button>
-          <div class="topbar__label">RNS Gap Closure</div>
-        </header>
-
-        <main id="main">
-          <section id="home" class="hero">
-            <div class="pill">Clinical Pilot</div>
-            <h1>Closing the Loop in Neuromodulation Care</h1>
+    <main id="main">
+      <section class="hero" aria-label="Hero">
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <div class="eyebrow">Clinical pilot · advisory-only</div>
+            <h1>Closing the loop in neuromodulation care.</h1>
             <p class="lead">
-              The RNS Gap Closure tool acts as a second pair of eyes for clinicians. It analyzes discrepancies between
-              unstructured clinical notes and structured PMDS exports to identify missed optimization opportunities.
+              RNS Gap Closure aligns narrative clinic notes with PMDS exports to surface measurable care gaps,
+              provide evidence-anchored rationales, and keep clinicians in control.
             </p>
-            <div class="actions">
-              <a class="btn btn--primary" href="#demo">Launch Demo</a>
-              <a class="btn" href="#what">Learn More</a>
+            <div class="hero__cta">
+              <a class="btn" href="#demo">Try the interactive demo</a>
+              <a class="btn btn--ghost" href="#gap">Read v1 gap</a>
             </div>
-
-            <div class="flow">
-              <div class="flow__card">
-                <div class="flow__icon">1</div>
-                <div class="flow__title">Input Data</div>
-                <div class="flow__item">EMR Systems</div>
-                <div class="flow__desc">Clinical notes &amp; history</div>
-                <div class="flow__item">PMDS Exports</div>
-                <div class="flow__desc">Treatment parameters &amp; counts</div>
-              </div>
-
-              <div class="flow__card">
-                <div class="flow__icon">2</div>
-                <div class="flow__title">Gap Engine</div>
-                <p>
-                  Hybrid deterministic + LLM pipeline with evidence grounding to detect care gaps and explain them in
-                  plain language.
-                </p>
-                <div class="flow__badge">Processing Logic</div>
-                <div class="flow__sub">Temporal alignment &amp; evidence grounding</div>
-              </div>
-
-              <div class="flow__card">
-                <div class="flow__icon">3</div>
-                <div class="flow__title">Outputs</div>
-                <div class="flow__item">Gap Reports</div>
-                <div class="flow__desc">Severity flags &amp; rationales</div>
-                <div class="flow__item">Clinical Actions</div>
-                <div class="flow__desc">Evidence-based pathways</div>
-                <div class="flow__item">Mismatch Flags</div>
-                <div class="flow__desc">Interpretation grounding</div>
-              </div>
+            <div class="hero__note">
+              Not for clinical use · no PHI · human-in-the-loop
             </div>
-          </section>
+          </div>
 
-          <section id="what" class="section">
-            <div class="section__title">What it Does</div>
-            <div class="section__grid">
-              <div class="card">
-                <h3>Aligns narrative + device data</h3>
-                <p>
-                  Notes often describe clinical seizures and patient experiences; PMDS provides objective measures and
-                  parameter changes. We align both to build a structured patient trajectory across visits.
-                </p>
-              </div>
-              <div class="card">
-                <h3>Flags measurable care gaps</h3>
-                <p>
-                  The v1 gap focuses on persistent clinical seizures across two visits without evidence-aligned
-                  optimization attempts, while respecting documented exceptions.
-                </p>
-              </div>
-              <div class="card">
-                <h3>Explains the flag</h3>
-                <p>
-                  Each flag includes rationale, evidence anchors, and suggested action classes. Ambiguity is labeled
-                  explicitly for human review.
-                </p>
-              </div>
+          <div class="hero__panel">
+            <div class="stat-card">
+              <div class="stat-card__label">MVP Inputs</div>
+              <div class="stat-card__value">Clinic notes + PMDS exports</div>
+              <div class="stat-card__detail">Deterministic parsing + LLM-assisted normalization</div>
             </div>
-          </section>
-
-          <section id="inputs" class="section">
-            <div class="section__title">Inputs</div>
-            <div class="section__grid two">
-              <div class="card card--note">
-                <h3>Clinical Notes</h3>
-                <ul>
-                  <li>Seizure descriptions and burden</li>
-                  <li>Clinician assessment and plan</li>
-                  <li>Follow-up intent and timing</li>
-                </ul>
-              </div>
-              <div class="card card--note">
-                <h3>PMDS Exports</h3>
-                <ul>
-                  <li>Programming parameters + changes</li>
-                  <li>Long episode and detection trends</li>
-                  <li>Device status and therapy counts</li>
-                </ul>
-              </div>
+            <div class="stat-card">
+              <div class="stat-card__label">v1 Gap</div>
+              <div class="stat-card__value">Persistent clinical seizures + optimization inertia</div>
+              <div class="stat-card__detail">Two-visit window with evidence-aligned expectations</div>
             </div>
-          </section>
+            <div class="stat-card">
+              <div class="stat-card__label">Outputs</div>
+              <div class="stat-card__value">Gap flag + rationale + evidence anchor</div>
+              <div class="stat-card__detail">Action class suggestions for clinician review</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <section id="how" class="section">
-            <div class="section__title">How it Works</div>
-            <div class="steps">
-              <div class="step">
-                <div class="step__num">1</div>
-                <div>
-                  <h4>Ingest</h4>
-                  <p>Collect notes and PMDS exports for RNS patients.</p>
-                </div>
-              </div>
-              <div class="step">
-                <div class="step__num">2</div>
-                <div>
-                  <h4>Normalize</h4>
-                  <p>Hybrid extraction: deterministic parsing + LLM-assisted normalization.</p>
-                </div>
-              </div>
-              <div class="step">
-                <div class="step__num">3</div>
-                <div>
-                  <h4>Gap logic</h4>
-                  <p>Apply v1 gap rules and detect exceptions or ambiguity.</p>
-                </div>
-              </div>
-              <div class="step">
-                <div class="step__num">4</div>
-                <div>
-                  <h4>Evidence grounding</h4>
-                  <p>RAG over a curated corpus to provide explainable anchors.</p>
-                </div>
-              </div>
-              <div class="step">
-                <div class="step__num">5</div>
-                <div>
-                  <h4>Human review</h4>
-                  <p>Clinician adjudication and feedback loop for QI.</p>
-                </div>
+      <section id="overview" class="section">
+        <div class="container">
+          <div class="section__header">
+            <h2>Overview</h2>
+            <p>
+              The project turns "best practice" into a curated, versioned evidence corpus and evaluates real-world
+              documentation against that bar. Ambiguity is labeled, not hidden.
+            </p>
+          </div>
+
+          <div class="grid three">
+            <div class="card">
+              <h3>Aligns data streams</h3>
+              <p>Builds longitudinal patient trajectories by linking notes and device snapshots across visits.</p>
+            </div>
+            <div class="card">
+              <h3>Flags measurable gaps</h3>
+              <p>Starts with one rigorously defined gap, then expands via a shared taxonomy.</p>
+            </div>
+            <div class="card">
+              <h3>Explains each flag</h3>
+              <p>Every output includes evidence grounding, uncertainty tags, and auditability.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gap" class="section section--tint">
+        <div class="container">
+          <div class="section__header">
+            <h2>Gap Definition (v1)</h2>
+            <p>Persistent clinical seizures across two visits with no evidence-aligned optimization attempt.</p>
+          </div>
+
+          <div class="grid two">
+            <div class="card">
+              <h3>Trigger & window</h3>
+              <ul>
+                <li>Clinical seizures documented at ≥2 consecutive visits</li>
+                <li>PMDS used to corroborate objective burden and parameter-change evidence</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Expected response</h3>
+              <ul>
+                <li>Optimization attempt or actionable programming plan</li>
+                <li>Escalation action class or documented rationale to defer</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="workflow" class="section">
+        <div class="container">
+          <div class="section__header">
+            <h2>Workflow</h2>
+            <p>Hybrid extraction keeps the pipeline interpretable while still handling messy notes.</p>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline__item">
+              <div class="timeline__dot">1</div>
+              <div>
+                <h4>Ingest</h4>
+                <p>Collect notes + PMDS exports for eligible RNS patients (on-prem).</p>
               </div>
             </div>
-          </section>
+            <div class="timeline__item">
+              <div class="timeline__dot">2</div>
+              <div>
+                <h4>Normalize</h4>
+                <p>Deterministic parsing + LLM-assisted extraction for narrative context.</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__dot">3</div>
+              <div>
+                <h4>Apply gap logic</h4>
+                <p>Evaluate v1 gap and exceptions across a two-visit window.</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__dot">4</div>
+              <div>
+                <h4>Ground & review</h4>
+                <p>Attach evidence anchors and route uncertain cases for clinician adjudication.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <section id="demo" class="section section--demo">
-            <div class="section__title">Interactive Analysis</div>
-            <p class="section__subtitle">Select a patient scenario to run the gap closure engine.</p>
+      <section id="evidence" class="section section--tint">
+        <div class="container">
+          <div class="section__header">
+            <h2>Evidence Corpus</h2>
+            <p>Versioned, curated sources define what counts as “evidence-aligned optimization.”</p>
+          </div>
 
-            <div class="demo">
-              <div class="demo__left">
-                <div class="panel">
-                  <div class="panel__title">1. Select Patient</div>
-                  <div class="patient-list">
-                    <button class="patient is-active" data-case="A" type="button">
-                      <div>
-                        <div class="patient__name">Patient A. (Synthetic)</div>
-                        <div class="patient__desc">Long interval without change despite high seizure burden</div>
-                      </div>
-                      <span class="patient__badge">A</span>
-                    </button>
-                    <button class="patient" data-case="B" type="button">
-                      <div>
-                        <div class="patient__name">Patient B. (Synthetic)</div>
-                        <div class="patient__desc">Interpretation mismatch: note says seizure free, PMDS shows activity</div>
-                      </div>
-                      <span class="patient__badge">B</span>
-                    </button>
-                    <button class="patient" data-case="C" type="button">
-                      <div>
-                        <div class="patient__name">Patient C. (Synthetic)</div>
-                        <div class="patient__desc">Stable patient, regular updates - no gaps found</div>
-                      </div>
-                      <span class="patient__badge">C</span>
-                    </button>
-                    <button class="patient" data-case="D" type="button">
-                      <div>
-                        <div class="patient__name">Patient D. (Synthetic)</div>
-                        <div class="patient__desc">Low therapy delivery despite reports of no benefit</div>
-                      </div>
-                      <span class="patient__badge">D</span>
-                    </button>
-                  </div>
+          <div class="grid two">
+            <div class="card">
+              <h3>Seed list (v0.1)</h3>
+              <p>10–25 high-yield items with metadata, rubric, and change log.</p>
+              <div class="chip">Owner · Evidence-strength rubric · Update cadence</div>
+            </div>
+            <div class="card">
+              <h3>RAG grounding</h3>
+              <p>Retrieval is based on metadata to keep citations consistent and traceable.</p>
+              <div class="chip">Paper · Guideline · Protocol · Manufacturer</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="demo" class="section">
+        <div class="container">
+          <div class="section__header">
+            <h2>Interactive Analysis</h2>
+            <p>Select a synthetic scenario to run the gap closure engine.</p>
+          </div>
+
+          <div class="demo">
+            <div class="demo__left">
+              <div class="panel">
+                <div class="panel__title">1. Select Patient</div>
+                <div class="patient-list">
+                  <button class="patient is-active" data-case="A" type="button">
+                    <div>
+                      <div class="patient__name">Patient A. (Synthetic)</div>
+                      <div class="patient__desc">Long interval without change despite high seizure burden</div>
+                    </div>
+                    <span class="patient__badge">A</span>
+                  </button>
+                  <button class="patient" data-case="B" type="button">
+                    <div>
+                      <div class="patient__name">Patient B. (Synthetic)</div>
+                      <div class="patient__desc">Interpretation mismatch: note says seizure free, PMDS shows activity</div>
+                    </div>
+                    <span class="patient__badge">B</span>
+                  </button>
+                  <button class="patient" data-case="C" type="button">
+                    <div>
+                      <div class="patient__name">Patient C. (Synthetic)</div>
+                      <div class="patient__desc">Stable patient, regular updates - no gaps found</div>
+                    </div>
+                    <span class="patient__badge">C</span>
+                  </button>
+                  <button class="patient" data-case="D" type="button">
+                    <div>
+                      <div class="patient__name">Patient D. (Synthetic)</div>
+                      <div class="patient__desc">Low therapy delivery despite reports of no benefit</div>
+                    </div>
+                    <span class="patient__badge">D</span>
+                  </button>
                 </div>
+              </div>
 
-                <div class="panel">
-                  <div class="panel__title">2. Source Data</div>
+              <div class="panel">
+                <div class="panel__title">2. Source Data</div>
 
-                  <div class="subpanel">
-                    <div class="subpanel__title">Clinical Note Excerpt</div>
-                    <pre id="noteText" class="note">Patient reports no benefit from RNS since implantation 2 years ago.
+                <div class="subpanel">
+                  <div class="subpanel__title">Clinical Note Excerpt</div>
+                  <pre id="noteText" class="note">Patient reports no benefit from RNS since implantation 2 years ago.
 Seizure frequency unchanged.
 Considering VNS.</pre>
-                  </div>
-
-                  <div class="subpanel">
-                    <div class="subpanel__title">PMDS Snapshot</div>
-                    <table class="table">
-                      <tbody>
-                        <tr>
-                          <td>Daily Therapy</td>
-                          <td id="pmdsDaily">&lt; 500 stims/day</td>
-                        </tr>
-                        <tr>
-                          <td>Implantation Date</td>
-                          <td id="pmdsImplant">2022-03-10</td>
-                        </tr>
-                        <tr>
-                          <td>Device Status</td>
-                          <td id="pmdsStatus">Active</td>
-                        </tr>
-                        <tr>
-                          <td>Battery Life</td>
-                          <td id="pmdsBattery">85%</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
                 </div>
-              </div>
 
-              <div class="demo__arrow" aria-hidden="true">→</div>
-
-              <div class="demo__right">
-                <div class="panel panel--report">
-                  <div class="panel__head">
-                    <div class="panel__title">3. Gap Analysis Report</div>
-                    <span id="reportStatus" class="pill pill--success">Generated</span>
-                  </div>
-
-                  <div id="reportBox" class="report report--warning">
-                    <div class="report__title">
-                      <span class="report__icon">!</span>
-                      <span id="reportTitle">Interpretation Mismatch Detected</span>
-                    </div>
-                    <div class="report__compare">
-                      <div class="report__chip">
-                        <div class="report__label">Patient (Subjective)</div>
-                        <div id="reportPatient">No benefit since 2y ago</div>
-                      </div>
-                      <div class="report__chip">
-                        <div class="report__label">Device (Objective)</div>
-                        <div id="reportDevice">Daily stims &lt; 500 (Low)</div>
-                      </div>
-                    </div>
-                    <p id="reportSummary">
-                      The clinical note assumes non-response, but the device data suggests the system has not yet been
-                      optimally titrated to a therapeutic dose.
-                    </p>
-                  </div>
-
-                  <div class="action">
-                    <div class="action__priority" id="reportPriority">High Priority</div>
-                    <div class="action__title" id="reportActionTitle">Review Detection/Stimulation Settings</div>
-                    <p id="reportActionNote">
-                      Patient receiving &lt;500 stimulations per day after 2 years. Sub-therapeutic stimulation may
-                      contribute to perceived lack of benefit.
-                    </p>
-                    <div class="action__evidence">
-                      <span>Evidence Anchor:</span>
-                      <span id="reportEvidence">Fisher et al., 2021 (placeholder): Optimization of therapy dose correlates with clinical outcome.</span>
-                    </div>
-                  </div>
-
-                  <div class="panel__footer">
-                    <button class="btn btn--ghost" type="button">Export Report PDF</button>
-                  </div>
+                <div class="subpanel">
+                  <div class="subpanel__title">PMDS Snapshot</div>
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>Daily Therapy</td>
+                        <td id="pmdsDaily">&lt; 500 stims/day</td>
+                      </tr>
+                      <tr>
+                        <td>Implantation Date</td>
+                        <td id="pmdsImplant">2022-03-10</td>
+                      </tr>
+                      <tr>
+                        <td>Device Status</td>
+                        <td id="pmdsStatus">Active</td>
+                      </tr>
+                      <tr>
+                        <td>Battery Life</td>
+                        <td id="pmdsBattery">85%</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
-          </section>
 
-          <section id="safety" class="section">
-            <div class="section__title">Safety &amp; Governance</div>
-            <div class="section__grid two">
-              <div class="card">
-                <h3>Advisory-only</h3>
-                <p>No autonomous actions. Human-in-the-loop review for every flag.</p>
-              </div>
-              <div class="card">
-                <h3>On-prem + traceable</h3>
-                <p>Designed for HIPAA-compliant environments with clear audit trails.</p>
+            <div class="demo__right">
+              <div class="panel panel--report">
+                <div class="panel__head">
+                  <div class="panel__title">3. Gap Analysis Report</div>
+                  <span id="reportStatus" class="pill pill--success">Generated</span>
+                </div>
+
+                <div id="reportBox" class="report report--warning">
+                  <div class="report__title">
+                    <span class="report__icon">!</span>
+                    <span id="reportTitle">Interpretation Mismatch Detected</span>
+                  </div>
+                  <div class="report__compare">
+                    <div class="report__chip">
+                      <div class="report__label">Patient (Subjective)</div>
+                      <div id="reportPatient">No benefit since 2y ago</div>
+                    </div>
+                    <div class="report__chip">
+                      <div class="report__label">Device (Objective)</div>
+                      <div id="reportDevice">Daily stims &lt; 500 (Low)</div>
+                    </div>
+                  </div>
+                  <p id="reportSummary">
+                    The clinical note assumes non-response, but the device data suggests the system has not yet been
+                    optimally titrated to a therapeutic dose.
+                  </p>
+                </div>
+
+                <div class="action">
+                  <div class="action__priority" id="reportPriority">High Priority</div>
+                  <div class="action__title" id="reportActionTitle">Review Detection/Stimulation Settings</div>
+                  <p id="reportActionNote">
+                    Patient receiving &lt;500 stimulations per day after 2 years. Sub-therapeutic stimulation may
+                    contribute to perceived lack of benefit.
+                  </p>
+                  <div class="action__evidence">
+                    <span>Evidence Anchor:</span>
+                    <span id="reportEvidence">Fisher et al., 2021 (placeholder): Optimization of therapy dose correlates with clinical outcome.</span>
+                  </div>
+                </div>
+
+                <div class="panel__footer">
+                  <button class="btn btn--ghost" type="button">Export Report PDF</button>
+                </div>
               </div>
             </div>
-          </section>
+          </div>
+        </div>
+      </section>
 
-          <section id="evaluation" class="section">
-            <div class="section__title">Evaluation</div>
-            <div class="section__grid">
-              <div class="card">
-                <h3>Primary</h3>
-                <p>Agreement with expert adjudication on gap flags.</p>
-              </div>
-              <div class="card">
-                <h3>Secondary</h3>
-                <p>Sensitivity/specificity, time saved, reviewer satisfaction, and uncertainty rate.</p>
-              </div>
-            </div>
-          </section>
+      <section id="safety" class="section section--tint">
+        <div class="container">
+          <div class="section__header">
+            <h2>Safety & Governance</h2>
+            <p>Designed for on-prem, traceable, conservative clinical review.</p>
+          </div>
 
-          <section id="team" class="section">
-            <div class="section__title">Team &amp; Next Steps</div>
-            <div class="section__grid two">
-              <div class="card">
-                <h3>Core clinical team</h3>
-                <ul>
-                  <li>Haley Harris (NeuroPace field engineer)</li>
-                  <li>Zeke Gleichgerrcht (research; neuromodulation clinic)</li>
-                  <li>Andreas Rodriguez (neuromodulation clinic)</li>
-                </ul>
-              </div>
-              <div class="card">
-                <h3>Next steps</h3>
-                <ul>
-                  <li>Finalize v1 gap definition + exceptions</li>
-                  <li>Seed the evidence corpus (10-25 items)</li>
-                  <li>Agree on minimum viable data schema</li>
-                </ul>
-              </div>
+          <div class="grid three">
+            <div class="card">
+              <h3>Advisory-only</h3>
+              <p>No autonomous actions. Clinicians adjudicate all flags.</p>
             </div>
-          </section>
-        </main>
+            <div class="card">
+              <h3>Auditability</h3>
+              <p>Every output includes evidence anchors and source traceability.</p>
+            </div>
+            <div class="card">
+              <h3>Ambiguity labeling</h3>
+              <p>Uncertain cases are explicitly flagged for human review.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="section">
+        <div class="container">
+          <div class="section__header">
+            <h2>Team & Next Steps</h2>
+            <p>Clinical alignment leads. Evidence and workflow reality drive design decisions.</p>
+          </div>
+
+          <div class="grid two">
+            <div class="card">
+              <h3>Core clinical team</h3>
+              <ul>
+                <li>Erafat Rehim</li>
+                <li>Zeke Gleichgerrcht</li>
+                <li>Andreas Rodriguez</li>
+                <li>Haley Harris</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Next steps</h3>
+              <ul>
+                <li>Finalize v1 gap definition + exceptions</li>
+                <li>Seed evidence corpus (10–25 items)</li>
+                <li>Confirm minimum viable data schema</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div>
+          <div class="footer__title">RNS Gap Closure</div>
+          <div class="footer__sub">Advisory-only concept site · no PHI</div>
+        </div>
+        <a class="btn btn--ghost" href="#main">Back to top</a>
       </div>
-    </div>
+    </footer>
 
     <script src="app.js"></script>
   </body>

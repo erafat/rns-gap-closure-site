@@ -1,14 +1,4 @@
 (function () {
-  const menu = document.querySelector('.menu');
-  const sidebar = document.getElementById('sidebar');
-
-  if (menu && sidebar) {
-    menu.addEventListener('click', () => {
-      const isOpen = sidebar.classList.toggle('is-open');
-      menu.setAttribute('aria-expanded', String(isOpen));
-    });
-  }
-
   const cases = {
     A: {
       note: 'Patient reports persistent focal aware seizures despite programming changes. No changes documented over the last two visits.\nSeizure frequency remains high.\nConcern for optimization inertia.',
